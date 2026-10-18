@@ -58,3 +58,8 @@ truth. If you want to deviate from it, stop and ask me first.
 ## Current focus
 Week 1: foundations and a single-agent baseline (see the roadmap in
 docs/architecture.md, section 13).
+## Local services (ports differ from defaults on purpose)
+- Postgres: localhost:5433, Redis: localhost:6380, Qdrant: localhost:6333.
+- Another project on this machine uses ports 5432 and 6379, so never
+  change these ports, and never stop or remove containers that do not
+  belong to the atlas-research compose project.
