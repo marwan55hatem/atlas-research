@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets and local settings
+.env
+
+# Node
+node_modules/
+dist/
+
+# Local data and logs
+.data/
+*.log
+.DS_Store
