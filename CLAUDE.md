@@ -54,6 +54,17 @@ truth. If you want to deviate from it, stop and ask me first.
   need internet access.
 - Do not delete files or run destructive commands without asking.
 - After each finished step, suggest a git commit message.
+- After each step, I run the checks myself: pytest, ruff, mypy, and
+  docker compose ps when services matter.
+- Then I run git add ., then git status and read the list. If any of
+  these appear, I stop and ask before committing: .env, .venv,
+  __pycache__, any file that looks like a key or secret, or any file
+  outside backend/, docs/ and the project root files.
+- If the list is clean, I commit with the suggested message and run
+  git push, then show the output.
+- I never run destructive commands (delete, reset --hard, force push,
+  docker compose down -v, or anything touching containers that are not
+  part of the atlas-research compose project) without asking.
 
 ## Current focus
 Week 1: foundations and a single-agent baseline (see the roadmap in
